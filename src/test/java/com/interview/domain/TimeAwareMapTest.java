@@ -52,13 +52,15 @@ public class TimeAwareMapTest extends TestCase {
         timeAwareMap.put("Key2", LocalDateTime.of(2022, 1, 1, 15, 44,56), "Key2Value2");
 
         //When
-        String actual = timeAwareMap.get("Key2", LocalDateTime.of(2022, 2, 1, 12, 44,56));
+        String actual = timeAwareMap.get("Key2", LocalDateTime.of(2022, 1, 2, 12, 44,56));
 
         //Then
         assertThat(actual).isEqualTo("Key2Value2");
 
         //When
         timeAwareMap.put("Key2", LocalDateTime.of(2022, 1, 1, 15, 44,56), "Key2Value3");
+        actual = timeAwareMap.get("Key2", LocalDateTime.of(2022, 1, 2, 12, 44,56));
+
         //Then
         assertThat(actual).isEqualTo("Key2Value3");
 
