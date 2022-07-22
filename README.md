@@ -12,7 +12,7 @@ For example, if we put below data
 | 3   | Key2 | 2022-01-05 | Key2Value1 |
 | 4   | Key1 | 2021-01-05 | Key1Value3 |
 
-### . When I call the get(Key1, 2021-01-05), The method should return *Key1Value3*
+### 1. When I call the get(Key1, 2021-01-05), The method should return *Key1Value3*
 #### Explanation :
 Since the hash table contain exact same key and time as inserted in 4, the method will just return Key1Value3  
 
